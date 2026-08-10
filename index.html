@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Independent product company building tools for the people behind the sound.">
   <meta name="twitter:image" content="https://monumentic.com/og.png">
 
-  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAYFBMVEUAAAD8/PzV1dXp6emmpqYqKioZGRnNzc1oaGiWlpY1NTXGxsa3t7dFRUVWVlaJiYl5eXkZGRnV1dUgICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKGGe8AAAAIHRSTlP+/OLo09bi487R1NvY1NHSz9ze4AAAAAAAAAAAAAAAAPTens0AAAIISURBVHja7ZnbkoMgEES5BRVQxPz/vy5Yu2tWQAVmqvaBfoupykkzDJeWkK6urq5qzUJrY19YPy8nuouvEgfw/fteWqGMDz3ER1QDQQbehPkDQKjECUDptsACNI0kQGfsEANgi50CQBZbsiTAFxvXQWi7GRlAKYwJlgfAmLhw4CsxvXABEG13A/Btp/BqALI83QMaiz3QJ2ow8QzQYCINEIs9P7ISsAbWf2GBZmxyuQ7t9eLR86q2SzngYTRU4hs2AgHewQGDabusgzSgfLcrBRSv4uWAfY7VANi6DgmAWRbR4uEA+F5VPAKEKevOZ5u5BqDDJxEBBEk0na5pNHGcVD8B+4Cv5zIstYDYwRQej1E7VAxREYBJZABXyICCIgzYAPY/AfyFDNDY09RWNJo5dbK6ABTM0sOB+XDwPq1Fa8OC/QvYnF82WTREzP9Zd7qKalm1XJt5Non9QEf7AS/al7PHFpXb0VjZvl8MEBL12FJ+hWbZkx2DuT8nAeqU87QkAMnTtXXECaAMI11KbQ1UgMGeXUBo9YX2GYDV39KeXKG4rwkmoC3buQXwsS3FG1D//m2RAcK1SwBEPHgBYCABZ74GkyOYAAaVzw6ZqMsRTABU4pgBwAbkGjH1JcdRqy2OKHhBQQ34u6IZLXb/kYVLMDP5+4QwN/9qEXrbzOgIopwkXV1dXbu+AOEvFLq7hPvbAAAAAElFTkSuQmCC">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,6 +137,20 @@
       background:
         radial-gradient(640px 420px at 10% -12%, rgba(255,255,255,.075), transparent 62%),
         radial-gradient(900px 560px at 88% 30%, rgba(255,255,255,.05), transparent 60%);
+    }
+    .hero-mark {
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%) rotate(6deg);
+      width: min(34vw, 430px);
+      height: auto;
+      color: var(--text);
+      opacity: .06;
+      pointer-events: none;
+      user-select: none;
+      -webkit-mask-image: linear-gradient(200deg, #000 55%, transparent 95%);
+      mask-image: linear-gradient(200deg, #000 55%, transparent 95%);
     }
     .pill {
       display: inline-flex; align-items: center; gap: 8px;
@@ -311,6 +325,7 @@
       .tieline-card { grid-template-columns: 1fr; gap: 28px; }
       .model-grid { grid-template-columns: 1fr; gap: 16px; }
       .products-head { flex-direction: column; align-items: flex-start; }
+      .hero-mark { display: none; }
     }
     @media (max-width: 640px) {
       .container { padding: 0 20px; }
@@ -348,6 +363,9 @@
   <main id="main">
     <!-- ================= Hero ================= -->
     <section class="hero" id="top" aria-label="Introduction">
+      <svg class="hero-mark" viewBox="0 0 326 436" aria-hidden="true" focusable="false">
+        <path fill="currentColor" fill-rule="evenodd" d="M0 37.7A37 37 0 0 1 56.9 6.5L290.2 155.8A74 74 0 0 1 290.3 280.4L57 430.2A37 37 0 0 1 0 399.1ZM55 185.5A14.5 14.5 0 0 1 84 185.5L84 252.5A14.5 14.5 0 0 1 55 252.5ZM123.5 141A14.5 14.5 0 0 1 152.5 141L152.5 297A14.5 14.5 0 0 1 123.5 297ZM192 185.5A14.5 14.5 0 0 1 221 185.5L221 252.5A14.5 14.5 0 0 1 192 252.5Z"/>
+      </svg>
       <div class="container">
         <p class="pill reveal in">The company behind Tieline</p>
         <h1 class="reveal in d1">Tools for the people<br>behind the sound.</h1>
